@@ -11,17 +11,6 @@
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
         <title>Talen</title>
-        <style type="text/css">
-            .background-popup { display: none;  background-color: #000000; opacity: 0.7; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 99; }
-            .content-popup { font-family: Verdana; display: none; background-color: #FFFFFF; position: absolute; top: 10%; right: 15%; bottom: 10%; left: 15%; z-index: 999; border: 7px solid #BBBBBB; }
-            .content-popup .popup-heading { background-color: #BBBBBB; padding: 7px 0; }
-            .content-popup .popup-heading h4 { margin: 7px 5px; }
-            .content-popup .popup-heading h4 span { position: absolute; right: 7px; cursor: pointer; }
-            .content-popup .popup-heading h4 span:hover { color: #FFFFFF; }
-            .content-popup .popup-body { padding: 5px; }
-            .popup-loading { display: none; font-family: Verdana; max-width: 150px; position: absolute; top: 45%; left: 45%; background-color: #000000; color: #FFFFFF; padding: 10px; z-index: 998; }
-        </style>
-
     </head>
     <body>
 
@@ -58,7 +47,7 @@
                         <h2 class="section-title about__initial">Kami telah menemukan banyak bakat orang</h2>
                          <p class="home__subtitles">Kami menemukan bakat seseorang dengan melakukan berbagai uji coba yang menarik. </p> <br>
                         <a href="#" class="button">Lihat Lainnya</a>
-                        <a href="#" class="button-home">Login</a>
+                        <a href="login.html" class="button-home">Login</a>
                     </div>
 
                     <img src="gambar.png" alt="" class="home__img">
@@ -164,53 +153,9 @@
 
                 </div>
             </div>
-            
-            <div class="background-popup"></div>
-                <div class="content-popup">
-                  <div class="popup-heading">
-                    <h4>Disini untuk judul popup <span class="close-popup">X</span></h4>
-                  </div>
-                  <div class="popup-body">
-                  Disini untuk konten popup
-                  </div>
-                </div>
-                <div class="popup-loading">loading. . .</div>
-                <button class="btn-popup">POPUP</button>
-
-
             <p class="footer__copy">&#169; 2022 Dark Side.</p>
         </footer>
-
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="main.js"></script>
-        <script type="text/javascript">
-        $(function(){
-          $background_element = $('.background-popup');
-          $content_element = $('.content-popup');
-          $loading = $('.popup-loading');
-
-          $('.btn-popup').on('click', function(){
-            $background_element.fadeIn('fast');
-            $loading.fadeIn('fast');
-
-            setTimeout(function(){ $content_element.fadeIn('fast'); $loading.fadeOut('fast'); }, 1000);
-          });
-
-          $('.close-popup').on('click', function(){
-            $background_element.fadeOut('fast');
-            $content_element.fadeOut('fast');
-          });
-
-          $(this).on('keyup', function(e){
-            if(e.which == 27){
-               $background_element.fadeOut('fast');
-               $content_element.fadeOut('fast');
-            }
-          });
-        });
-</script>
-
-
     </body>
 </html>
