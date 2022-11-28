@@ -45,7 +45,7 @@
                 <div class="home__container bd-container bd-grid">
                     <div class="about__data">
                         <h2 class="section-title about__initial">Farid Syifa Arrahim</h2>
-                         <p class="home__subtitles">Web Designer | Programmer | UL/UX Designer | Short Story Writer | Content Writer | Graphics Designer | Student</p> <br>
+                         <p class="home__subtitles text"></p> <br>
                         <a href="#" class="button">Lihat Lainnya</a>
                         <a href="login.html" class="button-home">Login</a>
                     </div>
@@ -158,4 +158,18 @@
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="main.js"></script>
     </body>
+    
+    <script>
+        var i=0,text;
+            text = "Web Designer | Programmer | UL/UX Designer | Short Story Writer | Content Writer | Graphics Designer | Student"
+
+        function ketik() {
+                if(i<text.length){
+                  document.getElementById("text").innerHTML += text.charAt(i);
+                  i++;
+                  setTimeout(ketik,80);
+                }
+              }
+              ketik();
+    </script>
 </html>
